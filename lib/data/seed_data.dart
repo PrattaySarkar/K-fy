@@ -1,0 +1,67 @@
+import '../models/subscription.dart';
+
+abstract final class SeedData {
+  static final List<Subscription> subscriptions = [
+    Subscription(
+      id: 'cursor',
+      name: 'Cursor',
+      cost: 20,
+      currency: 'USD',
+      billingDate: DateTime.now().add(const Duration(days: 2)),
+      isTrial: true,
+      trialDurationDays: 14,
+      monogram: 'C',
+    ),
+    Subscription(
+      id: 'prime',
+      name: 'Amazon',
+      cost: 30,
+      currency: 'USD',
+      billingDate: DateTime.now().add(const Duration(days: 21)),
+      isTrial: true,
+      trialDurationDays: 30,
+      monogram: 'A',
+    ),
+    Subscription(
+      id: 'spotify',
+      name: 'Spotify',
+      cost: 11.99,
+      currency: 'USD',
+      billingDate: DateTime.now().add(const Duration(days: 5)),
+      isTrial: true,
+      trialDurationDays: 14,
+      monogram: 'S',
+    ),
+    Subscription(
+      id: 'icloud',
+      name: 'iCloud+',
+      cost: 2.99,
+      currency: 'USD',
+      billingDate: DateTime(2026, 9, 14),
+      isTrial: false,
+      trialDurationDays: 0,
+      monogram: 'i',
+    ),
+    Subscription(
+      id: 'yt',
+      name: 'YouTube Premium',
+      cost: 13.99,
+      currency: 'USD',
+      billingDate: DateTime(2026, 9, 5),
+      isTrial: false,
+      trialDurationDays: 0,
+      monogram: 'Y',
+    ),
+    Subscription(
+      id: 'netflix',
+      name: 'Netflix Trial',
+      cost: 15.49,
+      currency: 'USD',
+      billingDate: DateTime.now(),
+      isTrial: true,
+      trialDurationDays: 7,
+      isHistorical: true,
+      monogram: 'N',
+    ),
+  ];
+}
